@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "spico/protobufs/error.proto";
+import "spico/protobufs/log.proto";
+
+package spico.protobufs;
+
+message Response {
+  string status = 1;
+  repeated Error errors = 2;
+  repeated Log logs = 3;
+
+  // should be one of our Response types
+  google.protobuf.Any body = 4;
+}

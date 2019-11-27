@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spico.protobufs;
+
+message Error {
+  // TODO: use +code+ field to reference knowledgebase solutions
+  string code = 1;
+
+  string message = 2;
+  string reference = 3;
+
+  string error_class = 4;
+  uint32 http_code = 5;
+
+  repeated Error original = 6;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package spico.protobufs.model;
+
+message Subscription {
+  string remote_id = 1;
+  uint64 expiry_time = 2;
+  string sync_token = 3;
+}

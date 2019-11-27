@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+package spico.protobufs.model;
+
+message Change {
+  string change_type = 1;
+  string detail = 2;
+  google.protobuf.Any resource = 3;
+}

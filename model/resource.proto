@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package spico.protobufs.model;
+
+message Resource {
+  string remote_id = 1;
+  string integration_id = 2;
+}

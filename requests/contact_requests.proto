@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/contact.proto';
+import 'spico/protobufs/model/integration.proto';
+
+package spico.protobufs.requests;
+
+message ContactInitOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+  string state = 2;
+  string redirect_uri = 3;
+}
+
+message ContactAuthenticateOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+  string code = 2;
+  string state = 3;
+}
+
+message ContactRefreshOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+}
+
+message ContactWatchChangesRequest {
+  spico.protobufs.model.Integration integration = 1;
+}
+
+message ListContactGroupsRequest {
+  repeated string integration_ids = 1;
+}
+
+message CreateContactGroupRequest {
+  spico.protobufs.model.ContactGroup group = 1;
+}
+
+message ListContactsRequest {
+  repeated string integration_ids = 1;
+  repeated string contact_group_ids = 2;
+  uint32 limit = 3;
+  string page = 4;
+  string search_text = 5;
+  uint64 before_date = 7;
+  uint64 after_date = 8;
+}
+
+message CreateContactRequest {
+  string integration_id = 1;
+
+  spico.protobufs.model.Contact contact = 2;
+}
+
+message ModifyContactRequest {
+  spico.protobufs.model.Contact contact = 1;
+}
+
+message ModifyContactsRequest {
+  repeated spico.protobufs.model.Contact contacts = 1;
+}
+
+message GetContactRequest {
+  spico.protobufs.model.Contact contact = 1;
+}
+
+message GetContactsRequest {
+  repeated spico.protobufs.model.Contact contacts = 1;
+}
+
+message DeleteContactsRequest {
+  repeated spico.protobufs.model.Contact contacts = 2;
+}

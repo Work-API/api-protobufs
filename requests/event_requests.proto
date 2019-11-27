@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/event.proto';
+import 'spico/protobufs/model/integration.proto';
+
+package spico.protobufs.requests;
+
+message EventInitOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+  string state = 2;
+  string redirect_uri = 3;
+}
+
+message EventAuthenticateOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+  string code = 2;
+  string state = 3;
+}
+
+message EventRefreshOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+}
+
+message EventWatchChangesRequest {
+  spico.protobufs.model.Integration integration = 1;
+}
+
+message ListCalendarsRequest {
+  repeated string integration_ids = 1;
+}
+
+message GetCalendarRequest {
+  repeated string integration_ids = 1;
+
+  spico.protobufs.model.Calendar calendar = 2;
+}
+
+message CreateCalendarRequest {
+  spico.protobufs.model.Calendar calendar = 1;
+}
+
+message UpdateCalendarRequest {
+  repeated string integration_ids = 1;
+
+  spico.protobufs.model.Calendar calendar = 2;
+}
+
+message ListEventsRequest {
+  repeated string integration_ids = 1;
+  repeated string calendar_ids = 2;
+  string before_date = 3;
+  string after_date = 4;
+  string query = 5;
+  string recurrence_id = 6;
+  uint32 limit = 7;
+}
+
+message ListEventInstancesRequest {
+  // event_id and calendar_id required - google needs calendar id
+  string integration_id = 1;
+  string event_id = 2;
+  string calendar_id = 3;
+  string before_date = 4;
+  string after_date = 5;
+}
+
+message CreateEventRequest {
+  spico.protobufs.model.Event event = 1;
+}
+
+message ModifyEventRequest {
+  spico.protobufs.model.Event event = 1;
+}
+
+message ModifyEventsRequest {
+  // Infer integration ID from event IDs. Potentially mixed
+
+  // Event objects: ID + all fields; can't guarantee all APIs support PATCH semantics
+  repeated spico.protobufs.model.Event events = 1;
+}
+
+message GetEventsRequest {
+  // Infer integration ID from event IDs. Potentially mixed
+
+  // partial Event objects: IDs only
+  repeated spico.protobufs.model.Event events = 1;
+}
+
+message GetEventAttachmentsRequest {
+  spico.protobufs.model.Event event = 2;
+}
+
+message DeleteEventsRequest {
+  // Infer integration ID from event IDs. Potentially mixed
+
+  // partial Event objects: IDs only
+  repeated spico.protobufs.model.Event events = 1;
+}

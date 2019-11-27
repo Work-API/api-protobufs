@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "spico/protobufs/model/contact.proto";
+import "spico/protobufs/model/email.proto";
+import "spico/protobufs/model/event.proto";
+import "spico/protobufs/model/file.proto";
+
+package spico.protobufs.model;
+
+message Search {
+  string id = 1;
+  string date_from = 2;
+  string date_until = 3;
+  string text = 4;
+
+  repeated Contact contacts = 5;
+  repeated Email emails = 6;
+  repeated Event events = 7;
+  repeated File files = 8;
+}

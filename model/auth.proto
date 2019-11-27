@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "spico/protobufs/model/environment.proto";
+
+package spico.protobufs.model;
+
+message Auth {
+  string access_token = 1;
+  string refresh_token = 2;
+  uint64 issued_at = 3;
+  uint32 expires_in = 4;
+  string provider_id = 5;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "spico/protobufs/request.proto";
+import "spico/protobufs/response.proto";
+
+package spico.protobufs;
+
+message Message {
+  // user's JWT token
+  string token = 1;
+
+  oneof payload {
+    Request request = 2;
+    Response response = 3;
+  }
+}

@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/contact.proto';
+import 'spico/protobufs/error.proto';
+import 'spico/protobufs/model/auth.proto';
+import 'spico/protobufs/model/subscription.proto';
+
+package spico.protobufs.responses;
+
+message ContactInitOauthResponse {
+  string uri = 1;
+  Error error = 2;
+}
+
+message ContactAuthenticateOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+  spico.protobufs.Error error = 2;
+}
+
+message ContactRefreshOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+}
+
+message ContactWatchChangesResponse {
+  repeated spico.protobufs.model.Subscription subscriptions = 1;
+}
+
+message ListContactGroupsResponse {
+  repeated spico.protobufs.model.ContactGroup groups = 2;
+}
+
+message CreateContactGroupResponse {
+  spico.protobufs.model.ContactGroup group = 1;
+}
+
+message ListContactsResponse {
+  repeated spico.protobufs.model.Contact contacts = 1;
+  string next_page = 2;
+}
+
+message CreateContactResponse {
+  spico.protobufs.model.Contact contact = 1;
+}
+
+message ModifyContactResponse {
+  spico.protobufs.model.Contact contact = 1;
+}
+
+message ModifyContactsResponse {
+  repeated spico.protobufs.model.Contact contacts = 1;
+}
+
+message GetContactResponse {
+  spico.protobufs.model.Contact contact = 1;
+}
+
+message GetContactsResponse {
+  repeated spico.protobufs.model.Contact contacts = 1;
+}
+
+message DeleteContactsResponse {
+  bool success = 1;
+  spico.protobufs.Error error = 2;
+}
+

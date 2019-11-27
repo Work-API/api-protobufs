@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package spico.protobufs.model;
+
+message ContactGroup {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+}
+
+message Contact {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string title = 3;
+  string first_name = 4;
+  string middle_name = 5;
+  string last_name = 6;
+
+  repeated ContactEmailAddress email_addresses = 7;
+  repeated ContactPhoneNumber phone_numbers = 8;
+  repeated ContactAddress addresses = 9;
+  repeated ContactGroup groups = 10;
+
+  string picture_url = 11;
+
+  uint64 created_at = 12;
+  uint64 updated_at = 13;
+}
+
+message ContactEmailAddress {
+  bool primary = 1;
+  string type = 2;
+  string address = 3;
+}
+
+message ContactPhoneNumber {
+  bool primary = 1;
+  string type = 2;
+  string number = 3;
+}
+
+message ContactAddress {
+  bool primary = 1;
+  string type = 2;
+  string street = 3;
+  string city = 4;
+  string region = 5;
+  string postal_code = 6;
+  string country = 7;
+}

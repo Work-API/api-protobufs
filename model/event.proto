@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "spico/protobufs/model/email.proto";
+
+package spico.protobufs.model;
+
+message Calendar {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+  string description = 4;
+  string location = 5;
+  string time_zone = 6;
+}
+
+message EventReminder {
+  string reminder_method = 1;
+  string description = 2;
+  string summary = 3;
+  uint64 minutes_before = 4;
+}
+
+message Event {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+  string description = 4;
+  repeated EventAttendee attendees = 5;
+
+  string start_date_time = 6;
+  string start_timezone = 7;
+  string end_date_time = 8;
+  string end_timezone = 9;
+
+  string location = 10;
+  bool all_day = 11;
+
+  repeated EventReminder reminders = 12;
+  string recurrence = 13;
+
+  repeated EventAttachment attachments = 14;
+
+  uint64 created_at = 15;
+  uint64 updated_at = 16;
+}
+
+message EventAttachment {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  google.protobuf.Any payload = 3;
+}
+
+message EventAttendee {
+  string profile_id = 1;
+  string email_address = 2;
+  string display_name = 3;
+  bool organizer = 4;
+  bool self = 5;
+  bool resource = 6;
+  bool optional = 7;
+  string response_status = 8;
+  string comment = 9;
+  uint32 additional_guests = 10;
+  string integration_id = 11;
+}

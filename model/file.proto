@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+import "spico/protobufs/model/parent.proto";
+
+package spico.protobufs.model;
+
+message File {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string filename = 3;
+  repeated Parent parents = 4;
+  uint64 size = 5;
+  string mime_type = 6;
+  uint64 last_modified_at = 7;
+  StorageRef storage_ref = 8;
+  bytes data = 9;
+  uint64 created_at = 10;
+  string extension = 11;
+  string kind = 12;
+  string remote_url = 13;
+
+  repeated FilePermission permissions = 14;
+}
+
+message StorageRef {
+  string path = 1;
+  string uri = 2;
+  uint64 expires_at = 3;
+}
+
+enum PermissionDiscoverable {
+  FALSE = 0;
+  TRUE = 1;
+  NOT_APPLICABLE = 2; // o365
+}
+
+enum PermissionRole {
+  OWNER = 0; // owner (gd), sp.owner (o365)
+  ORGANIZER = 1; // organizer (gd)
+  FILE_ORGANIZER = 2; // file_organizer  (gd)
+  WRITER = 3; // writer (gd), write (o365)
+  COMMENTER = 4; // commenter (gd)
+  READER = 5; // reader (gd), read (o365)
+  MEMBER = 6; // sp.member
+}
+
+enum PermissionType {
+  USER = 0; // user (gd)
+  GROUP = 1; // group (gd)
+  DOMAIN = 2; // domain (gd)
+  ANYONE = 3; // anyone (gd)
+}
+
+enum SharedPermissionType {
+  SHARED_FILE = 0; // file (gd)
+  SHARED_MEMBER = 1; // member (gd)
+}
+
+message SharedPermissionDetail {
+  SharedPermissionType type = 1;
+  PermissionRole primary_role = 2;
+  string inherited_id = 3;
+}
+
+message FilePermission {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  PermissionType type = 3;
+  repeated PermissionRole roles = 4;
+  string display_name = 5;
+  string email_address = 6;
+
+  string domain = 7; // (gd)
+  uint64 expiry = 8; // (gd)
+  PermissionDiscoverable discoverable = 9; // (gd)
+  SharedPermissionDetail permission_detail = 10; // (gd)
+}

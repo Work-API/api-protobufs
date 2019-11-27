@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/integration.proto';
+import 'spico/protobufs/model/auth.proto';
+import 'spico/protobufs/error.proto';
+
+package spico.protobufs.responses;
+
+message ListIntegrationsResponse {
+  repeated model.Integration integrations = 1;
+}
+
+message CreateIntegrationResponse {
+  model.Integration integration = 1;
+}
+
+message GetIntegrationsResponse {
+  repeated model.Integration integrations = 1;
+}
+
+message ModifyIntegrationsResponse {
+  repeated model.Integration integrations = 1;
+}
+
+message DeleteIntegrationsResponse {
+  bool success = 1;
+}
+
+message InitOauthResponse {
+  string uri = 1;
+  Error error = 2;
+}
+
+message AuthenticateOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+  spico.protobufs.Error error = 2;
+}
+
+message WatchChangesResponse {
+  uint64 expiration = 1;
+}

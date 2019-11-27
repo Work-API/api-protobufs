@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/file.proto';
+import 'spico/protobufs/error.proto';
+import 'spico/protobufs/model/auth.proto';
+import 'spico/protobufs/model/subscription.proto';
+
+package spico.protobufs.responses;
+
+message FileInitOauthResponse {
+  string uri = 1;
+  Error error = 2;
+}
+
+message FileAuthenticateOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+  spico.protobufs.Error error = 2;
+}
+
+message FileRefreshOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+}
+
+message FileWatchChangesResponse {
+  repeated spico.protobufs.model.Subscription subscriptions = 1;
+}
+
+message ListFilesResponse {
+  repeated spico.protobufs.model.File files = 1;
+  string next_page = 2;
+}
+
+message CreateFilesResponse {
+  // hydrated File objects, including IDs & meta
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message ModifyFilesResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message GetFilesResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message DeleteFilesResponse {
+  bool success = 1;
+}
+
+message MoveFilesResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message CopyFilesResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message GetFilePermissionsResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message ModifyFilePermissionsResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message CreateFilePermissionsResponse {
+  repeated spico.protobufs.model.File files = 1;
+}
+
+message DeleteFilePermissionsResponse {
+  repeated spico.protobufs.model.File files = 1;
+}

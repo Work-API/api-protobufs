@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/event.proto';
+import 'spico/protobufs/error.proto';
+import 'spico/protobufs/model/auth.proto';
+import 'spico/protobufs/model/subscription.proto';
+
+package spico.protobufs.responses;
+
+message EventInitOauthResponse {
+  string uri = 1;
+  Error error = 2;
+}
+
+message EventAuthenticateOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+  spico.protobufs.Error error = 2;
+}
+
+message EventRefreshOauthResponse {
+  spico.protobufs.model.Auth auth = 1;
+}
+
+message EventWatchChangesResponse {
+  repeated spico.protobufs.model.Subscription subscriptions = 1;
+}
+
+message ListCalendarsResponse {
+  repeated spico.protobufs.model.Calendar calendars = 2;
+}
+
+message GetCalendarResponse {
+  spico.protobufs.model.Calendar calendar = 1;
+}
+
+message CreateCalendarResponse {
+  spico.protobufs.model.Calendar calendar = 1;
+}
+
+message UpdateCalendarResponse {
+  spico.protobufs.model.Calendar calendar = 1;
+}
+
+message ListEventsResponse {
+  repeated spico.protobufs.model.Event events = 1;
+}
+
+message ListEventInstancesResponse {
+  repeated spico.protobufs.model.Event events = 1;
+}
+
+message CreateEventResponse {
+  spico.protobufs.model.Event event = 1;
+}
+
+message ModifyEventResponse {
+  spico.protobufs.model.Event event = 1;
+}
+
+message ModifyEventsResponse {
+  repeated spico.protobufs.model.Event events = 1;
+}
+
+message GetEventsResponse {
+  repeated spico.protobufs.model.Event events = 1;
+}
+
+message GetEventAttachmentsResponse {
+  repeated spico.protobufs.model.EventAttachment attachments = 1;
+}
+
+message DeleteEventsResponse {
+  bool success = 1;
+  spico.protobufs.Error error = 2;
+}

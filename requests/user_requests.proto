@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/user.proto';
+import 'spico/protobufs/model/environment.proto';
+
+package spico.protobufs.requests;
+
+message ListUsersRequest {
+  model.Environment environment = 1;
+}
+
+message CreateUserRequest {
+  model.User user = 1;
+}
+
+message GetUserRequest {
+  model.User user = 1;
+}
+
+message GetUserByIntegrationProviderRequest {
+  string provider_id = 1;
+  string provider = 2;
+}
+
+message ModifyUserRequest {
+  model.User user = 1;
+}
+
+message DeleteUserRequest {
+  model.User user = 1;
+}
+

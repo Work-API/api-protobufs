@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "spico/protobufs/model/auth.proto";
+import "spico/protobufs/model/subscription.proto";
+import "spico/protobufs/model/environment.proto";
+
+package spico.protobufs.model;
+
+message Integration {
+  string id = 1;
+  string provider = 2;
+  // string provider_id = 3;
+  string media_type = 4;
+  Auth auth = 5;
+  repeated Subscription subscriptions = 6;
+  Environment environment = 7;
+  uint64 created_at = 8;
+}

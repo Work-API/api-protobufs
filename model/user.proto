@@ -1,0 +1,13 @@
+syntax = "proto3";
+import 'spico/protobufs/model/integration.proto';
+
+package spico.protobufs.model;
+
+message User {
+  string id = 1;
+  string arbitrary_id = 2;
+  uint64 created_at = 4;
+  string token = 5;
+  repeated Integration integrations = 6;
+  string environment_guid = 7;
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/integration.proto';
+import 'spico/protobufs/model/user.proto';
+
+package spico.protobufs.requests;
+
+message ListIntegrationsRequest {
+  model.User user = 1;
+}
+
+message CreateIntegrationRequest {
+  model.Integration integration = 1;
+}
+
+message GetIntegrationsRequest {
+  repeated string integration_ids = 1;
+  bool include_auth = 2;
+
+  string media_type = 3;
+}
+
+message ModifyIntegrationsRequest {
+  repeated model.Integration integrations = 1;
+}
+
+message DeleteIntegrationsRequest {
+  repeated model.Integration integrations = 1;
+}
+
+message InitOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+  string state = 2;
+  string redirect_uri = 3;
+}
+
+message AuthenticateOauthRequest {
+  spico.protobufs.model.Integration integration = 1;
+  string code = 2;
+  string state = 3;
+}
+
+message WatchChangesRequest {
+  spico.protobufs.model.Integration integration = 1;
+}
