@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package spico.protobufs.model;
+package livil.model;
 
 message ProviderConfig {
   string id = 1;

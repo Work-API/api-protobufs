@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package spico.protobufs.model;
+package livil.model;
 
 message Subscription {
   string remote_id = 1;

@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-import "spico/protobufs/model/parent.proto";
+import "model/parent.proto";
 
-package spico.protobufs.model;
+package livil.model;
 
 message File {
   string remote_id = 1;

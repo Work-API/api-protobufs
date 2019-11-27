@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "spico/protobufs/model/auth.proto";
-import "spico/protobufs/model/subscription.proto";
-import "spico/protobufs/model/environment.proto";
+import "model/auth.proto";
+import "model/subscription.proto";
+import "model/environment.proto";
 
-package spico.protobufs.model;
+package livil.model;
 
 message Integration {
   string id = 1;

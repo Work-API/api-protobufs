@@ -1,7 +1,8 @@
 syntax = "proto3";
-import 'spico/protobufs/model/integration.proto';
 
-package spico.protobufs.model;
+import 'model/integration.proto';
+
+package livil.model;
 
 message User {
   string id = 1;

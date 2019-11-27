@@ -1,8 +1,6 @@
 syntax = "proto3";
 
-import "spico/protobufs/model/environment.proto";
-
-package spico.protobufs.model;
+package livil.model;
 
 message Auth {
   string access_token = 1;
