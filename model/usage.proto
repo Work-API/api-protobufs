@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package spico.protobufs.model;
+
+message Usage {
+  string id = 1;
+  uint64 started_at = 2;
+  uint64 finished_at = 3;
+  string data = 4;
+  uint64 updated_at = 5;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/user.proto';
+
+package spico.protobufs.requests;
+
+message ListUsageRequest {
+  model.User user = 1;
+  uint64 started_at = 2;
+  uint64 finished_at = 3;
+}

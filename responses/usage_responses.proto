@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import 'spico/protobufs/model/usage.proto';
+
+package spico.protobufs.responses;
+
+message ListUsageResponse {
+  repeated model.Usage usages = 1;
+}
