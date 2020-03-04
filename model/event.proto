@@ -40,11 +40,12 @@ message Event {
 
   repeated EventReminder reminders = 12;
   string recurrence = 13;
+  string parent_event_id = 14;
 
-  repeated EventAttachment attachments = 14;
+  repeated EventAttachment attachments = 15;
 
-  uint64 created_at = 15;
-  uint64 updated_at = 16;
+  uint64 created_at = 16;
+  uint64 updated_at = 17;
 }
 
 message EventAttachment {
