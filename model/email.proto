@@ -60,4 +60,5 @@ message EmailAttachment {
 
   bool inline = 3;
   google.protobuf.Any payload = 4;
+  string content_transfer_encoding = 5;
 }
