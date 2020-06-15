@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package spico.protobufs;
+package work_api.protobufs;
 
 message Log {
   string level = 1;

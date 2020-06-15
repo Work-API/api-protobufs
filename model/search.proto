@@ -1,20 +1,20 @@
 syntax = "proto3";
 
-//import "model/contact.proto";
-//import "model/email.proto";
-//import "model/event.proto";
-//import "model/file.proto";
-//
-//package work_api.protobufs.model;
-//
-//message Search {
-//  string id = 1;
-//  string date_from = 2;
-//  string date_until = 3;
-//  string text = 4;
-//
-//  repeated Contact contacts = 5;
-//  repeated Email emails = 6;
-//  repeated Event events = 7;
-//  repeated File files = 8;
-//}
+import "protobufs/model/contact.proto";
+import "protobufs/model/email.proto";
+import "protobufs/model/event.proto";
+import "protobufs/model/file.proto";
+
+package work_api.protobufs.model;
+
+message Search {
+  string id = 1;
+  string date_from = 2;
+  string date_until = 3;
+  string text = 4;
+
+  repeated Contact contacts = 5;
+  repeated Email emails = 6;
+  repeated Event events = 7;
+  repeated File files = 8;
+}

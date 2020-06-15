@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/integration.proto';
-import 'spico/protobufs/model/auth.proto';
-import 'spico/protobufs/error.proto';
+import 'protobufs/model/integration.proto';
+import 'protobufs/model/auth.proto';
+import 'protobufs/error.proto';
 
-package spico.protobufs.responses;
+package work_api.protobufs.responses;
 
 message ListIntegrationsResponse {
   repeated model.Integration integrations = 1;
@@ -32,8 +32,8 @@ message InitOauthResponse {
 }
 
 message AuthenticateOauthResponse {
-  spico.protobufs.model.Auth auth = 1;
-  spico.protobufs.Error error = 2;
+  model.Auth auth = 1;
+  Error error = 2;
 }
 
 message WatchChangesResponse {

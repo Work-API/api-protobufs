@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/user.proto';
+import 'protobufs/model/user.proto';
 
-package spico.protobufs.requests;
+package work_api.protobufs.requests;
 
 message ListUsageRequest {
   model.User user = 1;

@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/email.proto';
-import 'spico/protobufs/error.proto';
-import 'spico/protobufs/model/auth.proto';
-import 'spico/protobufs/model/change.proto';
-import 'spico/protobufs/model/subscription.proto';
+import 'protobufs/model/email.proto';
+import 'protobufs/error.proto';
+import 'protobufs/model/auth.proto';
+import 'protobufs/model/change.proto';
+import 'protobufs/model/subscription.proto';
 
-package spico.protobufs.responses;
+package work_api.protobufs.responses;
 
 message EmailInitOauthResponse {
   string uri = 1;
@@ -14,68 +14,68 @@ message EmailInitOauthResponse {
 }
 
 message EmailAuthenticateOauthResponse {
-  spico.protobufs.model.Auth auth = 1;
-  spico.protobufs.Error error = 2;
+  model.Auth auth = 1;
+  Error error = 2;
 }
 
 message EmailRefreshOauthResponse {
-  spico.protobufs.model.Auth auth = 1;
+  model.Auth auth = 1;
 }
 
 message EmailWatchChangesResponse {
-  repeated spico.protobufs.model.Subscription subscriptions = 1;
+  repeated model.Subscription subscriptions = 1;
 }
 
 message EmailGetChangesResponse {
-  repeated spico.protobufs.model.Change changes = 1;
+  repeated model.Change changes = 1;
 }
 
 message ListMailboxesResponse {
-  repeated spico.protobufs.model.Mailbox mailboxes = 2;
+  repeated model.Mailbox mailboxes = 2;
 }
 
 message CreateMailboxResponse {
-  spico.protobufs.model.Mailbox mailbox = 1;
+  model.Mailbox mailbox = 1;
 }
 
 message ListEmailsResponse {
-  repeated spico.protobufs.model.Email emails = 1;
+  repeated model.Email emails = 1;
   string next_page = 2;
   uint64 total_results = 3;
 }
 
 message GetConversationResponse {
-  repeated spico.protobufs.model.Email emails = 1;
+  repeated model.Email emails = 1;
   string next_page = 2;
 }
 
 message CreateDraftResponse {
-  spico.protobufs.model.Email email = 1;
+  model.Email email = 1;
 }
 
 message UpdateDraftResponse {
-  spico.protobufs.model.Email email = 1;
+  model.Email email = 1;
 }
 
 message SendEmailResponse {
-  spico.protobufs.model.Email email = 1;
+  model.Email email = 1;
 }
 
 message ModifyEmailsResponse {
   bool success = 1;
-  spico.protobufs.Error error = 2;
+  Error error = 2;
 }
 
 message GetEmailsResponse {
-  repeated spico.protobufs.model.Email emails = 1;
+  repeated model.Email emails = 1;
 }
 
 message GetEmailAttachmentsResponse {
-  repeated spico.protobufs.model.EmailAttachment attachments = 1;
+  repeated model.EmailAttachment attachments = 1;
 }
 
 message DeleteEmailsResponse {
   bool success = 1;
-  spico.protobufs.Error error = 2;
+  Error error = 2;
 }
 
