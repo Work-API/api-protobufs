@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package work_api.protobufs.model;
+
+message WebhookSubscription {
+  string id = 1;
+  string destination = 2;
+  uint64 expiry_time = 3;
+  string scope = 4;
+}
+
