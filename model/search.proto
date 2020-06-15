@@ -5,7 +5,7 @@ syntax = "proto3";
 //import "model/event.proto";
 //import "model/file.proto";
 //
-//package livil.model;
+//package work_api.protobufs.model;
 //
 //message Search {
 //  string id = 1;

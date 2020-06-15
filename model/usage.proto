@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package spico.protobufs.model;
+package work_api.protobufs.model;
 
 message Usage {
   string id = 1;

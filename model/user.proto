@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-import 'model/integration.proto';
+import 'protobufs/model/integration.proto';
 
-package livil.model;
+package work_api.protobufs.model;
 
 message User {
   string id = 1;

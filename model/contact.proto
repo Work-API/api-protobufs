@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package livil.model;
+package work_api.protobufs.model;
 
 message ContactGroup {
   string remote_id = 1;

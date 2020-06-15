@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package livil;
+package work_api.protobufs;
 
 message Error {
   // TODO: use +code+ field to reference knowledgebase solutions

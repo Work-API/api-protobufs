@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 import "google/protobuf/any.proto";
-import "model/file.proto";
+import "protobufs/model/file.proto";
 
-package livil.model;
+package work_api.protobufs.model;
 
 message Mailbox {
   string remote_id = 1;
