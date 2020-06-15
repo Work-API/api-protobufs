@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/integration.proto';
-import 'spico/protobufs/model/user.proto';
+import 'protobufs/model/integration.proto';
+import 'protobufs/model/user.proto';
 
-package spico.protobufs.requests;
+package work_api.protobufs.requests;
 
 message ListIntegrationsRequest {
   model.User user = 1;
@@ -29,17 +29,17 @@ message DeleteIntegrationsRequest {
 }
 
 message InitOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string state = 2;
   string redirect_uri = 3;
 }
 
 message AuthenticateOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string code = 2;
   string state = 3;
 }
 
 message WatchChangesRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
 }

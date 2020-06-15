@@ -1,18 +1,24 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/environment.proto';
+import 'protobufs/model/environment.proto';
 
-package spico.protobufs.responses;
+package work_api.protobufs.responses;
 
 message CreateEnvironmentResponse {
-  spico.protobufs.model.Environment environment = 1;
+  model.Environment environment = 1;
 }
 message UpdateEnvironmentResponse {
-  spico.protobufs.model.Environment environment = 1;
+  model.Environment environment = 1;
 }
 message GetEnvironmentsResponse {
-  repeated spico.protobufs.model.Environment environments = 1;
+  repeated model.Environment environments = 1;
 }
 message DeleteEnvironmentResponse {
+  bool success = 1;
+}
+message DeactivateEnvironmentResponse {
+  bool success = 1;
+}
+message ReactivateEnvironmentResponse {
   bool success = 1;
 }

@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-import "spico/protobufs/request.proto";
-import "spico/protobufs/response.proto";
+import "protobufs/request.proto";
+import "protobufs/response.proto";
 
-package spico.protobufs;
+package work_api.protobufs;
 
 message Message {
   // user's JWT token

@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/user.proto';
-import 'spico/protobufs/model/integration.proto';
+import 'protobufs/model/user.proto';
+import 'protobufs/model/integration.proto';
 
-package spico.protobufs.responses;
+package work_api.protobufs.responses;
 
 message ListUsersResponse {
   repeated model.User users = 1;
@@ -27,5 +27,13 @@ message ModifyUserResponse {
 }
 
 message DeleteUserResponse {
+  bool success = 1;
+}
+
+message DeactivateUserResponse {
+  bool success = 1;
+}
+
+message ReactivateUserResponse {
   bool success = 1;
 }

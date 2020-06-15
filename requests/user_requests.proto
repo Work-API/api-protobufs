@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/user.proto';
-import 'spico/protobufs/model/environment.proto';
+import 'protobufs/model/user.proto';
+import 'protobufs/model/environment.proto';
 
-package spico.protobufs.requests;
+package work_api.protobufs.requests;
 
 message ListUsersRequest {
   model.Environment environment = 1;
@@ -30,3 +30,10 @@ message DeleteUserRequest {
   model.User user = 1;
 }
 
+message DeactivateUserRequest {
+  model.User user = 1;
+}
+
+message ReactivateUserRequest {
+  model.User user = 1;
+}

@@ -1,5 +1,4 @@
 syntax = "proto3";
-
 import 'protobufs/model/integration.proto';
 
 package work_api.protobufs.model;
@@ -11,4 +10,5 @@ message User {
   string token = 5;
   repeated Integration integrations = 6;
   string environment_guid = 7;
+  string state = 8;
 }

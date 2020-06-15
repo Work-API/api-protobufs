@@ -1,28 +1,28 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/file.proto';
-import 'spico/protobufs/model/integration.proto';
+import 'protobufs/model/file.proto';
+import 'protobufs/model/integration.proto';
 
-package spico.protobufs.requests;
+package work_api.protobufs.requests;
 
 message FileInitOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string state = 2;
   string redirect_uri = 3;
 }
 
 message FileAuthenticateOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string code = 2;
   string state = 3;
 }
 
 message FileRefreshOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
 }
 
 message FileWatchChangesRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
 }
 
 enum SortBy {
@@ -55,58 +55,58 @@ message CreateFilesRequest {
   repeated string integration_ids = 1;
 
   // skeletal File objects, no IDs, minimal meta
-  repeated spico.protobufs.model.File files = 2;
+  repeated model.File files = 2;
 }
 
 message ModifyFilesRequest {
   // Infer integration ID from file IDs. Potentially mixed
 
   // File objects: ID + all fields; can't guarantee all APIs support PATCH semantics
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
 }
 
 message GetFilesRequest {
   // Infer integration ID from file IDs. Potentially mixed
 
   // partial File objects: IDs only
-  repeated spico.protobufs.model.File files = 2;
+  repeated model.File files = 2;
 }
 
 message DeleteFilesRequest {
   // Infer integration ID from file IDs. Potentially mixed
 
   // partial File objects: IDs only
-  repeated spico.protobufs.model.File files = 2;
+  repeated model.File files = 2;
 }
 
 message MoveFilesRequest {
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
   string integration_id = 3;
   string parent_id = 2;
 }
 
 message CopyFilesRequest {
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
   string integration_id = 3;
   string parent_id = 2;
 }
 
 // list all permissions for multiple files
 message GetFilePermissionsRequest {
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
 }
 
 // modify permissions for multiple files
 message ModifyFilePermissionsRequest {
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
 }
 
 // create permissions for a multiple files
 message CreateFilePermissionsRequest {
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
 }
 
 // delete permissions for a multiple files
 message DeleteFilePermissionsRequest {
-  repeated spico.protobufs.model.File files = 1;
+  repeated model.File files = 1;
 }

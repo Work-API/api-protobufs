@@ -1,10 +1,10 @@
 syntax = "proto3";
 
 import "google/protobuf/any.proto";
-import "spico/protobufs/error.proto";
-import "spico/protobufs/log.proto";
+import "protobufs/error.proto";
+import "protobufs/log.proto";
 
-package spico.protobufs;
+package work_api.protobufs;
 
 message Response {
   string status = 1;

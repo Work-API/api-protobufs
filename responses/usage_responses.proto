@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/usage.proto';
+import 'protobufs/model/usage.proto';
 
-package spico.protobufs.responses;
+package work_api.protobufs.responses;
 
 message ListUsageResponse {
   repeated model.Usage usages = 1;

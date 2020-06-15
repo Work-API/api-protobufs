@@ -1,33 +1,33 @@
 syntax = "proto3";
 
-import 'spico/protobufs/model/email.proto';
-import 'spico/protobufs/model/contact.proto';
-import 'spico/protobufs/model/integration.proto';
+import 'protobufs/model/email.proto';
+import 'protobufs/model/contact.proto';
+import 'protobufs/model/integration.proto';
 
-package spico.protobufs.requests;
+package work_api.protobufs.requests;
 
 message EmailInitOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string state = 2;
   string redirect_uri = 3;
 }
 
 message EmailAuthenticateOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string code = 2;
   string state = 3;
 }
 
 message EmailRefreshOauthRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
 }
 
 message EmailWatchChangesRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
 }
 
 message EmailGetChangesRequest {
-  spico.protobufs.model.Integration integration = 1;
+  model.Integration integration = 1;
   string change_id = 2;
 }
 
@@ -36,13 +36,13 @@ message ListMailboxesRequest {
 }
 
 message CreateMailboxRequest {
-  spico.protobufs.model.Mailbox mailbox = 1;
+  model.Mailbox mailbox = 1;
 }
 
 message ListEmailsRequest {
   repeated string integration_ids = 1;
   repeated string mailbox_ids = 2;
-  spico.protobufs.model.Contact contact = 3;
+  model.Contact contact = 3;
   uint32 limit = 4;
   string page = 5;
   string search_text = 6;
@@ -51,47 +51,47 @@ message ListEmailsRequest {
 }
 
 message GetConversationRequest {
-  spico.protobufs.model.Conversation conversation = 1;
+  model.Conversation conversation = 1;
 }
 
 message CreateDraftRequest {
   // Email object, no IDs
-  spico.protobufs.model.Email email = 2;
+  model.Email email = 2;
 }
 
 message UpdateDraftRequest {
-  spico.protobufs.model.Email email = 1;
+  model.Email email = 1;
 }
 
 // an existing draft by id, or a brand new message
 message SendEmailRequest {
-  spico.protobufs.model.Email email = 2;
+  model.Email email = 2;
 }
 
 message ModifyEmailsRequest {
   // Infer integration ID from email IDs. Potentially mixed
 
   // Email objects: ID + all fields; can't guarantee all APIs support PATCH semantics
-  repeated spico.protobufs.model.Email emails = 1;
+  repeated model.Email emails = 1;
 }
 
 message GetEmailsRequest {
   // Infer integration ID from email IDs. Potentially mixed
 
   // partial Email objects: IDs only
-  repeated spico.protobufs.model.Email emails = 1;
+  repeated model.Email emails = 1;
 }
 
 message GetEmailAttachmentsRequest {
   string integration_id = 1;
 
   // Email object, with attachment references
-  spico.protobufs.model.Email email = 2;
+  model.Email email = 2;
 }
 
 message DeleteEmailsRequest {
   // Infer integration ID from email IDs. Potentially mixed
 
   // partial Email objects: IDs only
-  repeated spico.protobufs.model.Email emails = 2;
+  repeated model.Email emails = 2;
 }
