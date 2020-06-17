@@ -8,4 +8,6 @@ message ListUsageRequest {
   model.User user = 1;
   uint64 started_at = 2;
   uint64 finished_at = 3;
+  uint64 offset = 4;
+  uint64 limit = 5;
 }

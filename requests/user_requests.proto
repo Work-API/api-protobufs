@@ -7,6 +7,8 @@ package work_api.protobufs.requests;
 
 message ListUsersRequest {
   model.Environment environment = 1;
+  uint64 offset = 2;
+  uint64 limit = 3;
 }
 
 message CreateUserRequest {

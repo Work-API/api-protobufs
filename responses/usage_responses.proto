@@ -6,4 +6,5 @@ package work_api.protobufs.responses;
 
 message ListUsageResponse {
   repeated model.Usage usages = 1;
+  uint64 total_count = 2;
 }
