@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+import 'protobufs/model/environment.proto';
+import 'protobufs/model/webhook_subscription.proto';
+
+package work_api.protobufs.requests;
+
+message ListWebhookSubscriptionsRequest {
+  model.Environment environment = 1;
+  uint64 offset = 2;
+  uint64 limit = 3;
+}
+
+message CreateWebhookSubscriptionRequest {
+  model.WebhookSubscription webhook_subscription = 1;
+}
+
+message GetWebhookSubscriptionRequest {
+  model.WebhookSubscription webhook_subscription = 1;
+}
+
+message ModifyWebhookSubscriptionRequest {
+  model.WebhookSubscription webhook_subscription = 1;
+}
+
+message DeleteWebhookSubscriptionRequest {
+  model.WebhookSubscription webhook_subscription = 1;
+}

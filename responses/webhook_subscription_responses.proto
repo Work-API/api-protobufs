@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import 'protobufs/model/webhook_subscription.proto';
+
+package work_api.protobufs.responses;
+
+message ListWebhookSubscriptionsResponse {
+  repeated model.WebhookSubscription webhook_subscriptions = 1;
+  uint64 total_count = 2;
+}
+
+message CreateWebhookSubscriptionResponse {
+  model.WebhookSubscription webhook_subscription = 1;
+}
+
+message GetWebhookSubscriptionResponse {
+  model.WebhookSubscription webhook_subscription = 1;
+}
+
+message ModifyWebhookSubscriptionResponse {
+  model.WebhookSubscription webhook_subscription = 1;
+}
+
+message DeleteWebhookSubscriptionResponse {
+  bool success = 1;
+}
