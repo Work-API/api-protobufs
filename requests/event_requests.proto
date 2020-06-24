@@ -58,7 +58,7 @@ message ListEventsRequest {
 message ListEventInstancesRequest {
   // event_id and calendar_id required - google needs calendar id
   string integration_id = 1;
-  string event_id = 2;
+  string recurring_event_id = 2;
   string calendar_id = 3;
   string before_date = 4;
   string after_date = 5;
