@@ -62,6 +62,7 @@ message ListEventInstancesRequest {
   string calendar_id = 3;
   string before_date = 4;
   string after_date = 5;
+  string limit = 6;
 }
 
 message CreateEventRequest {
@@ -86,6 +87,7 @@ message GetEventsRequest {
 
   // partial Event objects: IDs only
   repeated model.Event events = 1;
+  string calendar_id = 2;
 }
 
 message GetEventAttachmentsRequest {
@@ -97,4 +99,5 @@ message DeleteEventsRequest {
 
   // partial Event objects: IDs only
   repeated model.Event events = 1;
+  string calendar_id = 2;
 }
