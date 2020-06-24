@@ -70,6 +70,7 @@ message CreateEventRequest {
 
 message ModifyEventRequest {
   model.Event event = 1;
+  string new_calendar_id = 2;
 }
 
 message ModifyEventsRequest {
@@ -77,6 +78,7 @@ message ModifyEventsRequest {
 
   // Event objects: ID + all fields; can't guarantee all APIs support PATCH semantics
   repeated model.Event events = 1;
+  string new_calendar_id = 2;
 }
 
 message GetEventsRequest {
