@@ -22,3 +22,6 @@ message DeactivateEnvironmentResponse {
 message ReactivateEnvironmentResponse {
   bool success = 1;
 }
+message RegenerateEnvironmentResponse {
+  model.Environment environment = 1;
+}
