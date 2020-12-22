@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import 'protobufs/model/calendar.proto';
 import 'protobufs/model/event.proto';
 import 'protobufs/model/integration.proto';
 
@@ -64,6 +65,15 @@ message ListEventInstancesRequest {
   string after_date = 5;
   string limit = 6;
 }
+
+message ListBusyTimeslotsRequest {
+  repeated string integration_ids = 1;
+  repeated string calendar_ids = 2;
+  string start_time = 3;
+  string end_time = 4;
+  bool expand_events = 5;
+}
+
 
 message CreateEventRequest {
   model.Event event = 1;
