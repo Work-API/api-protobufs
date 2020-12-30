@@ -52,7 +52,7 @@ message ListEventInstancesResponse {
 }
 
 message ListBusyTimeslotsResponse {
-  repeated model.BusyTimeslot busy_timeslots = 1;
+  repeated model.BusyTimeslot timeslots = 1;
 }
 
 message CreateEventResponse {
