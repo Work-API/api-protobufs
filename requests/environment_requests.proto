@@ -22,3 +22,6 @@ message DeactivateEnvironmentRequest {
 message ReactivateEnvironmentRequest {
   model.Environment environment = 1;
 }
+message RegenerateEnvironmentRequest {
+  model.Environment environment = 1;
+}

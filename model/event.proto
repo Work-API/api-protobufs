@@ -3,17 +3,8 @@ syntax = "proto3";
 import "google/protobuf/any.proto";
 import "protobufs/model/email.proto";
 
+
 package work_api.protobufs.model;
-
-message Calendar {
-  string remote_id = 1;
-  string integration_id = 2;
-
-  string name = 3;
-  string description = 4;
-  string location = 5;
-  string time_zone = 6;
-}
 
 message EventReminder {
   string reminder_method = 1;

@@ -1,9 +1,11 @@
 syntax = "proto3";
 
+import 'protobufs/model/calendar.proto';
 import 'protobufs/model/event.proto';
 import 'protobufs/error.proto';
 import 'protobufs/model/auth.proto';
 import 'protobufs/model/subscription.proto';
+import 'protobufs/model/busy_timeslot.proto';
 
 package work_api.protobufs.responses;
 
@@ -47,6 +49,10 @@ message ListEventsResponse {
 
 message ListEventInstancesResponse {
   repeated model.Event events = 1;
+}
+
+message ListBusyTimeslotsResponse {
+  repeated model.BusyTimeslot timeslots = 1;
 }
 
 message CreateEventResponse {

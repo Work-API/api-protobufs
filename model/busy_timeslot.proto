@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "protobufs/model/event.proto";
+
+package work_api.protobufs.model;
+
+message BusyTimeslot {
+  string start_time = 1;
+  string end_time = 2;
+
+  string calendar_id = 3;
+  repeated Event events = 4;
+}

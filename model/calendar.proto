@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "protobufs/model/busy_timeslot.proto";
+
+package work_api.protobufs.model;
+
+message Calendar {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+  string description = 4;
+  string location = 5;
+  string time_zone = 6;
+
+  repeated BusyTimeslot busy_timeslots = 7;
+}
