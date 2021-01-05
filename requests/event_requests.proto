@@ -71,7 +71,8 @@ message ListBusyTimeslotsRequest {
   repeated string calendar_ids = 2;
   string start_time = 3;
   string end_time = 4;
-  bool expand_events = 5;
+  string timezone = 5;
+  bool expand_events = 6;
 }
 
 
