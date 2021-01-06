@@ -69,8 +69,8 @@ message ListEventInstancesRequest {
 message ListBusyTimeslotsRequest {
   repeated string integration_ids = 1;
   repeated string calendar_ids = 2;
-  string start_time = 3;
-  string end_time = 4;
+  string after_date = 3;
+  string before_date = 4;
   string timezone = 5;
   bool expand_events = 6;
 }
