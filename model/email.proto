@@ -13,6 +13,16 @@ message Mailbox {
 
   uint64 unread_count = 4;
   uint64 total_count = 5;
+
+  enum MailboxType {
+    INBOX = 0;
+    SEND = 1;
+    DRAFTS = 2;
+    OUTBOX = 3;
+    OTHER = 4;
+  }
+
+  MailboxType mailbox_type = 6;
 }
 
 message Conversation {
