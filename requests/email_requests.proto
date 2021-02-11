@@ -48,6 +48,7 @@ message ListEmailsRequest {
   string search_text = 6;
   string before_date = 7;
   string after_date = 8;
+  bool exclude_attachments = 9;
 }
 
 message GetConversationRequest {
