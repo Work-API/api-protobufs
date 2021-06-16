@@ -39,6 +39,8 @@ message Event {
   uint64 updated_at = 17;
 
   string calendar_id = 18;
+
+  repeated Conference conferences = 19;
 }
 
 message EventAttachment {
@@ -60,4 +62,9 @@ message EventAttendee {
   string comment = 9;
   uint32 additional_guests = 10;
   string integration_id = 11;
+}
+
+message Conference {
+  string solution = 1;
+  string access = 2;
 }
