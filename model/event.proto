@@ -39,6 +39,8 @@ message Event {
   uint64 updated_at = 17;
 
   string calendar_id = 18;
+
+  string conference_link = 19;
 }
 
 message EventAttachment {
