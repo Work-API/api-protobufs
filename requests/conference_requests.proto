@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import 'protobufs/model/meeting.proto';
+import 'protobufs/model/integration.proto';
+
+package work_api.protobufs.requests;
+
+message ConferenceInitOauthRequest {
+  model.Integration integration = 1;
+  string state = 2;
+  string redirect_uri = 3;
+}
+
+message ConferenceAuthenticateOauthRequest {
+  model.Integration integration = 1;
+  string code = 2;
+  string state = 3;
+}
+
+message ConferenceRefreshOauthRequest {
+  model.Integration integration = 1;
+}
+
+message CreateMeetingRequest {
+  string integration_id = 1;
+
+  model.Meeting meeting = 2;
+}
+
+message DeleteMeetingRequest {
+  repeated model.Meeting meeting = 1;
+}
