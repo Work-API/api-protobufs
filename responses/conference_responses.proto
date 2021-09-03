@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import 'protobufs/model/meeting.proto';
+import 'protobufs/error.proto';
+import 'protobufs/model/auth.proto';
+
+package work_api.protobufs.responses;
+
+message ConferenceInitOauthResponse {
+  string uri = 1;
+  Error error = 2;
+}
+
+message ConferenceAuthenticateOauthResponse {
+  model.Auth auth = 1;
+  Error error = 2;
+}
+
+message ConferenceRefreshOauthResponse {
+  model.Auth auth = 1;
+}
+
+message CreateMeetingResponse {
+  model.Meeting meeting = 1;
+}
+
+message DeleteMeetingResponse {
+  bool success = 1;
+  Error error = 2;
+}
