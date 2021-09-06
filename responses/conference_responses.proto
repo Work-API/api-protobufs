@@ -24,6 +24,10 @@ message CreateMeetingResponse {
   model.Meeting meeting = 1;
 }
 
+message GetMeetingResponse {
+  model.Meeting meeting = 1;
+}
+
 message DeleteMeetingResponse {
   bool success = 1;
   Error error = 2;

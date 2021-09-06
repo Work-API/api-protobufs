@@ -27,6 +27,10 @@ message CreateMeetingRequest {
   model.Meeting meeting = 2;
 }
 
+message GetMeetingRequest {
+  model.Meeting meeting = 1;
+}
+
 message DeleteMeetingRequest {
   model.Meeting meeting = 1;
 }
