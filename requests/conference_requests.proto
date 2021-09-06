@@ -28,5 +28,5 @@ message CreateMeetingRequest {
 }
 
 message DeleteMeetingRequest {
-  repeated model.Meeting meeting = 1;
+  model.Meeting meeting = 1;
 }
