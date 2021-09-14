@@ -41,6 +41,7 @@ message Event {
   string calendar_id = 18;
 
   string conference_link = 19;
+  string conference_info = 20;
 }
 
 message EventAttachment {
