@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "google/protobuf/struct.proto";
+
 package work_api.protobufs.model;
 
 message Auth {
@@ -8,4 +10,5 @@ message Auth {
   uint64 issued_at = 3;
   uint32 expires_in = 4;
   string provider_id = 5;
+  google.protobuf.Struct meta = 10;
 }

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import 'protobufs/error.proto';
+import 'protobufs/model/auth.proto';
+
+package work_api.protobufs.responses;
+
+message ImInitOauthResponse {
+  string uri = 1;
+  Error error = 2;
+}
+
+message ImAuthenticateOauthResponse {
+  model.Auth auth = 1;
+  Error error = 2;
+}
+
+message ImRefreshOauthResponse {
+  model.Auth auth = 1;
+  Error error = 2;
+}

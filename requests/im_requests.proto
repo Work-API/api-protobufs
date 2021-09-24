@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import 'protobufs/model/integration.proto';
+
+package work_api.protobufs.requests;
+
+message ImInitOauthRequest {
+  model.Integration integration = 1;
+  string state = 2;
+  string redirect_uri = 3;
+}
+
+message ImAuthenticateOauthRequest {
+  model.Integration integration = 1;
+  string code = 2;
+  string state = 3;
+}
+
+message ImRefreshOauthRequest {
+  model.Integration integration = 1;
+}

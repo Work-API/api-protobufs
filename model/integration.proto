@@ -9,7 +9,6 @@ package work_api.protobufs.model;
 message Integration {
   string id = 1;
   string provider = 2;
-  // string provider_id = 3;
   string media_type = 4;
   Auth auth = 5;
   repeated Subscription subscriptions = 6;

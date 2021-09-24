@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package work_api.protobufs.model;
+
+message Team {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+}
+
