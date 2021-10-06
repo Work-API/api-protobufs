@@ -2,6 +2,8 @@ syntax = "proto3";
 
 import 'protobufs/error.proto';
 import 'protobufs/model/auth.proto';
+import 'protobufs/model/channel.proto';
+import 'protobufs/model/team.proto';
 
 package work_api.protobufs.responses;
 
@@ -18,4 +20,24 @@ message ImAuthenticateOauthResponse {
 message ImRefreshOauthResponse {
   model.Auth auth = 1;
   Error error = 2;
+}
+
+message ListTeamsResponse {
+  repeated model.Team teams = 1;
+}
+
+message ListChannelsResponse {
+  repeated model.Channel channels = 1;
+}
+
+message GetChannelsResponse {
+  repeated model.Channel channels = 1;
+}
+
+message ListImUsersResponse {
+  repeated model.ImUser users = 1;
+}
+
+message GetImUserResponse {
+  model.ImUser user = 1;
 }

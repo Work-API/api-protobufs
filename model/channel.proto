@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package work_api.protobufs.model;
+
+message ImUser {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+  string real_name = 4;
+}
+
+message Channel {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string name = 3;
+  string team_id = 4;
+  string channel_type = 5;
+
+  repeated ImUser members = 6;
+}

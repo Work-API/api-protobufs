@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import 'protobufs/model/integration.proto';
+import 'protobufs/model/channel.proto';
 
 package work_api.protobufs.requests;
 
@@ -18,4 +19,25 @@ message ImAuthenticateOauthRequest {
 
 message ImRefreshOauthRequest {
   model.Integration integration = 1;
+}
+
+message ListTeamsRequest { }
+
+message ListChannelsRequest {
+  repeated string team_ids = 1;
+  repeated string channel_types = 2;
+}
+
+message GetChannelsRequest {
+  repeated model.Channel channels = 1;
+}
+
+message ListImUsersRequest {
+  repeated string team_ids = 1;
+  repeated string channel_types = 2;
+}
+
+message GetImUserRequest {
+  model.ImUser user = 1;
+  repeated string team_id = 2;
 }
