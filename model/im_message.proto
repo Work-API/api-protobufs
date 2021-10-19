@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package work_api.protobufs.model;
+
+message ImMessage {
+  string remote_id = 1;
+  string integration_id = 2;
+
+  string message_type = 3;
+
+  string channel_id = 4;
+  string sender_id = 5;
+
+  string content = 6;
+}

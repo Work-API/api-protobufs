@@ -4,6 +4,7 @@ import 'protobufs/error.proto';
 import 'protobufs/model/auth.proto';
 import 'protobufs/model/channel.proto';
 import 'protobufs/model/team.proto';
+import 'protobufs/model/im_message.proto';
 
 package work_api.protobufs.responses;
 
@@ -40,4 +41,8 @@ message ListImUsersResponse {
 
 message GetImUserResponse {
   model.ImUser user = 1;
+}
+
+message ListImMessagesResponse {
+  repeated model.ImMessage messages = 1;
 }

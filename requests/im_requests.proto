@@ -41,3 +41,8 @@ message GetImUserRequest {
   model.ImUser user = 1;
   repeated string team_id = 2;
 }
+
+message ListImMessagesRequest {
+  string team_id = 1;
+  string channel_id = 2;
+}
