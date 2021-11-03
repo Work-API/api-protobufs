@@ -12,4 +12,5 @@ message ImMessage {
   string sender_id = 5;
 
   string content = 6;
+  string received_at = 7;
 }
