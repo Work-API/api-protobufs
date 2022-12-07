@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import 'protobufs/model/permission.proto';
+
+package work_api.protobufs.requests;
+
+message ListPermissionsRequest { }
