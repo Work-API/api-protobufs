@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import 'protobufs/model/permission.proto';
+
+package work_api.protobufs.responses;
+
+message ListPermissionsResponse {
+  repeated model.Permission permissions = 1;
+}
