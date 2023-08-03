@@ -8,6 +8,7 @@ message ImUser {
 
   string name = 3;
   string real_name = 4;
+  bool is_owner = 5;
 }
 
 message Channel {
