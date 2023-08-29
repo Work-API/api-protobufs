@@ -2,6 +2,10 @@ syntax = "proto3";
 
 import 'protobufs/error.proto';
 import 'protobufs/model/auth.proto';
+import "protobufs/model/task.proto";
+import "protobufs/model/organisation.proto";
+import "protobufs/model/opportunity.proto";
+import "protobufs/model/leads.proto";
 
 package work_api.protobufs.responses;
 
@@ -15,3 +19,34 @@ message CrmAuthenticateOauthResponse {
   Error error = 2;
 }
 
+message GetLead{
+  model.Lead lead=1;
+}
+
+message ListLeads{
+  repeated model.Lead leads=1;
+}
+
+message GetOpportunity{
+  model.Opportunity opportunity =1;
+}
+
+message ListOpportunities{
+  repeated model.Opportunity opportunities =1;
+}
+
+message GetTask{
+  model.Task task=1;
+}
+
+message ListTasks{
+  repeated model.Task tasks =1;
+}
+
+message GetOrganisation{
+  model.Organisation organisation=1;
+}
+
+message ListOrganisation{
+  repeated model.Organisation organisations=1;
+}
