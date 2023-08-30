@@ -21,12 +21,20 @@ message ListOrganisation {
   uint64 limit = 2;
 }
 
+message GetCrmContacts{
+
+}
+
+message GetCrmContact{
+  string remote_id=1;
+}
+
 message GetOrganisation {
     string id =1;
 }
 
 message GetTask{
-  string id=1;
+  string remote_id=1;
 }
 
 message ListTasks{
@@ -35,7 +43,7 @@ message ListTasks{
 }
 
 message GetOpportunity{
-string id=1;
+string remote_id=1;
 }
 
 message GetOpportunities{
@@ -46,7 +54,7 @@ message GetOpportunities{
 
 message GetLead{
   
-  string id=1;
+  string remote_id=1;
 }
 
 message ListLeads{
