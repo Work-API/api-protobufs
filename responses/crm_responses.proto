@@ -19,34 +19,34 @@ message CrmAuthenticateOauthResponse {
   Error error = 2;
 }
 
-message GetLead{
+message GetLeadResponse{
   model.Lead lead=1;
 }
 
-message ListLeads{
+message ListLeadsResponse{
   repeated model.Lead leads=1;
 }
 
-message GetOpportunity{
+message GetOpportunityResponse{
   model.Opportunity opportunity =1;
 }
 
-message ListOpportunities{
+message ListOpportunitiesResponse{
   repeated model.Opportunity opportunities =1;
 }
 
-message GetTask{
+message GetTaskResponse{
   model.Task task=1;
 }
 
-message ListTasks{
+message ListTasksResponse{
   repeated model.Task tasks =1;
 }
 
-message GetOrganisation{
+message GetOrganisationResponse{
   model.Organisation organisation=1;
 }
 
-message ListOrganisation{
+message ListOrganisationResponse{
   repeated model.Organisation organisations=1;
 }

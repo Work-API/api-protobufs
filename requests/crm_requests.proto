@@ -16,48 +16,48 @@ message CrmAuthenticateOauthRequest {
   string state = 3;
 }
 
-message ListOrganisation {
+message ListOrganisationRequest {
   uint64 offset = 1;
   uint64 limit = 2;
 }
 
-message GetCrmContacts{
+message GetCrmContactsRequest{
 
 }
 
-message GetCrmContact{
+message GetCrmContactRequest{
   string remote_id=1;
 }
 
-message GetOrganisation {
+message GetOrganisationRequest {
     string id =1;
 }
 
-message GetTask{
+message GetTaskRequest{
   string remote_id=1;
 }
 
-message ListTasks{
+message ListTasksRequest{
   uint64 offset = 1;
   uint64 limit = 2;
 }
 
-message GetOpportunity{
+message GetOpportunityRequest{
 string remote_id=1;
 }
 
-message GetOpportunities{
+message ListOpportunitiesRequest{
   
   uint64 offset=1;
   uint64 limit=2;
 }
 
-message GetLead{
+message GetLeadRequest{
   
   string remote_id=1;
 }
 
-message ListLeads{
+message ListLeadsRequest{
   
 }
 
