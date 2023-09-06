@@ -22,6 +22,8 @@ message ListOrganisationRequest {
 }
 
 message GetCrmContactsRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
 
 }
 
