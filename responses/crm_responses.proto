@@ -59,7 +59,4 @@ message GetOrganisationResponse{
 message ListOrganisationResponse{
   repeated model.Organisation organisations=1;
 
-  message ListCrmContatsResponse{
-    repeated model.Contact contacts=1;
-  }
 }
