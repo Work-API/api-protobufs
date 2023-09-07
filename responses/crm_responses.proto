@@ -6,8 +6,13 @@ import "protobufs/model/task.proto";
 import "protobufs/model/organisation.proto";
 import "protobufs/model/opportunity.proto";
 import "protobufs/model/leads.proto";
+import "protobufs/model/contact.proto";
 
 package work_api.protobufs.responses;
+
+message CrmRefreshOauthResponse {
+  model.Auth auth = 1;
+}
 
 message CrmInitOauthResponse {
   string uri = 1;
@@ -21,6 +26,10 @@ message CrmAuthenticateOauthResponse {
 
 message GetLeadResponse{
   model.Lead lead=1;
+}
+
+message ListCrmContactsResponse{
+  repeated model.Contact contacts=1;
 }
 
 message ListLeadsResponse{
@@ -49,4 +58,8 @@ message GetOrganisationResponse{
 
 message ListOrganisationResponse{
   repeated model.Organisation organisations=1;
+
+  message ListCrmContatsResponse{
+    repeated model.Contact contacts=1;
+  }
 }

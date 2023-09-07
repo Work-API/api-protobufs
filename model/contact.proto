@@ -10,13 +10,13 @@ message ContactGroup {
 }
 
 message Contact {
-  string remote_id = 1;
-  string integration_id = 2;
+  string remote_id = 4;
+  string integration_id = 5;
 
-  string title = 3;
-  string first_name = 4;
-  string middle_name = 5;
-  string last_name = 6;
+  string title = 6;
+  string first_name = 7;
+  string middle_name = 8;
+  string last_name = 9;
 
   repeated ContactEmailAddress email_addresses = 7;
   repeated ContactPhoneNumber phone_numbers = 8;
