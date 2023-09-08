@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 import "protobufs/model/integration.proto";
-
+import "protobufs/model/contact.proto";
 package work_api.protobufs.requests;
 
 message CrmInitOauthRequest {
@@ -31,7 +31,8 @@ message GetCrmContactsRequest{
 }
 
 message GetCrmContactRequest{
-  string remote_id=1;
+  model.Contact contact=1;
+  
 }
 
 message GetOrganisationRequest {
