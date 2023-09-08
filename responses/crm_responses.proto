@@ -60,3 +60,8 @@ message ListOrganisationResponse{
   repeated model.Organisation organisations=1;
 
 }
+
+message GetCrmContactResponse{
+  model.Contact contact=1;
+}
+
