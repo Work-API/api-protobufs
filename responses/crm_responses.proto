@@ -28,7 +28,7 @@ message GetLeadResponse{
   model.Lead lead=1;
 }
 
-message ListCrmContactsResponse{
+message GetCrmContactsResponse{
   repeated model.Contact contacts=1;
 }
 
