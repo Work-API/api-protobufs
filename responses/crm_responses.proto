@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-import 'protobufs/error.proto';
-import 'protobufs/model/auth.proto';
+import "protobufs/error.proto";
+import "protobufs/model/auth.proto";
 import "protobufs/model/task.proto";
 import "protobufs/model/organisation.proto";
 import "protobufs/model/opportunity.proto";
