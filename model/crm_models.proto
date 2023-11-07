@@ -1,0 +1,166 @@
+syntax = "proto3";
+
+import "protobufs/model/contact.proto";
+
+package work_api.protobufs.model;
+
+message Company
+{
+    string remote_id = 1;
+    string integration_id = 2;
+
+    string name=5;
+    string site=6;
+    
+    ContactAddress billing_address =10;
+    ContactAddress shipping_address=11;
+
+    ContactPhoneNumber phone=15;
+    ContactPhoneNumber fax=16;
+
+    repeated Contact contacts=20;
+
+    uint64 created_at = 30;
+    uint64 updated_at = 31;
+
+}
+
+message Task {
+    string remote_id = 1;
+    string integration_id = 2;
+    string id = 3;
+
+    string whoId = 10;
+    string whatId = 11;
+    string subject = 12;
+    
+    string activity_date = 20;
+    string status = 21;
+    string priority = 22;
+    bool is_high_priority = 23;
+    
+    string description = 25;
+    string owner_id = 30;
+    string company_id = 35;
+    
+    bool isClosed = 40;
+    bool isArchived = 41;
+    
+    uint32 call_duration_in_seconds = 51;
+    string callType = 52;
+    string callDisposition = 53;
+    string callObject = 54;
+    
+    bool isreminderset = 61;
+    uint64 reminder_datetime = 60;
+    bool isRecurrence = 62;
+    string tasksubtype = 63;
+    
+    
+    uint64 created_date = 70;
+    string created_by_id = 71;
+    uint64 last_modified_date = 72;
+    string last_modified_by_id = 73;
+    
+    uint64 completed_datetime = 74;
+ }
+
+ message Opportunity {
+    string remote_id = 1;
+    string integration_id = 2;
+    string id = 3;
+
+    bool is_deleted = 5;
+    model.Company company =6;
+    bool is_private = 7;
+    string name = 10;
+    string description = 11;
+    string stagename = 12;
+    double amount = 15;
+    double probability = 16;
+    double expected_revenue = 17;
+    string total_opportunity_quantity = 18;
+    uint64 close_date = 20;
+    string type = 21;
+    
+    string leadsource = 25;
+    bool is_closed = 26;
+    bool is_won = 27;
+    
+    string forecast_category = 30;
+    string forecast_category_name = 31;
+    string campaign_id = 32;
+    bool has_opportunity_lineitem = 33;
+
+    string pricebook2_id = 35;
+    string owner_id = 40;
+
+    uint64 created_date = 45;
+    string created_by_id = 46;
+    uint64 last_modified_date = 47;
+    string last_modifiedby_id = 48;
+    string systemmodstamp = 49;
+    uint64 last_activity_date = 50;
+    uint64 last_referenced_date = 51;
+    
+    uint32 pushcount = 60;
+    uint64 last_stage_changedate = 61;
+    uint32 fiscal_quarter = 62;
+    uint32 fisca_lyear = 63;
+    string fiscal = 64;
+    string contactid = 65;
+    
+    
+    
+    bool has_open_activity = 70;
+    bool has_overdue_task = 71;
+    
+}
+
+message Lead {
+
+    string remote_id = 1;
+    string integration_id = 2;
+    string id = 3;
+
+    bool isdeleted = 4;
+    string masterrecordid = 5;
+    
+    string company = 6;
+    ContactAddress address = 7;
+    string phone = 8;
+    string mobilephone = 9;
+    string fax = 10;
+    string email = 11;
+    string website = 12;
+    string photourl = 13;
+    string description = 14;
+    string leadsource = 15;
+    string status = 16;
+    string industry = 17;
+    string rating = 18;
+    string annualrevenue = 19;
+    string numberofemployees = 20;
+    string ownerid = 21;
+    bool isconverted = 22;
+    uint64 converteddate = 23;
+    
+    bool isunreadbyowner = 27;
+    uint64 createddate = 28;
+    string createdbyid = 29;
+    uint64 lastmodifieddate = 30;
+    string lastmodifiedbyid = 31;
+    uint64 systemmodstamp = 32;
+    uint64 lastactivitydate = 33;
+    uint64 lastvieweddate = 34;
+    uint64 lastreferenceddate = 35;
+    string jigsaw = 36;
+    string jigsawcontactid = 37;
+    string cleanstatus = 38;
+    string companydunsnumber = 39;
+    string dandbcompanyid = 40;
+    string emailbouncedreason = 41;
+    uint64 emailbounceddate = 42;
+    string individualid = 43;
+         
+}

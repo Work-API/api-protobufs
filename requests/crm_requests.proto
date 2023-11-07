@@ -1,8 +1,7 @@
 syntax = "proto3";
 
-import 'protobufs/model/integration.proto';
-
-
+import "protobufs/model/integration.proto";
+import "protobufs/model/crm_models.proto";
 package work_api.protobufs.requests;
 
 message CrmInitOauthRequest {
@@ -16,4 +15,19 @@ message CrmAuthenticateOauthRequest {
   string code = 2;
   string state = 3;
 }
+
+message CrmRefreshOauthRequest {
+  model.Integration integration = 1;
+}
+
+message CrmGetCompanyRequest {
+  model.Company company=1;
+}
+
+message CrmListCompaniesRequest {
+  uint64 offset = 1;
+  uint64 limit = 2;
+
+}
+
 
