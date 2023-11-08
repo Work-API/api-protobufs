@@ -1,7 +1,8 @@
 syntax = "proto3";
 
-import "protobufs/model/integration.proto";
-import "protobufs/model/crm_models.proto";
+import 'protobufs/model/integration.proto';
+import 'protobufs/model/crm_models.proto';
+
 package work_api.protobufs.requests;
 
 message CrmInitOauthRequest {
