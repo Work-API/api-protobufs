@@ -30,3 +30,6 @@ message CrmListCompaniesResponse
   repeated model.Company company=1;
 }
 
+message CrmListGetLeadResponse{
+  model.Lead lead=1;
+}

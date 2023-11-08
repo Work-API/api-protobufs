@@ -31,4 +31,13 @@ message CrmListCompaniesRequest {
 
 }
 
+message CrmGetLeadRequest {
+  model.Lead lead=1;
+}
+
+message CrmGetLeadsRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
 
