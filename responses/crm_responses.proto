@@ -27,7 +27,7 @@ message CrmGetCompanyResponse{
 
 message CrmListCompaniesResponse
 {
-  repeated model.Company company=1;
+  repeated model.Company companies=1;
 }
 
 message CrmGetLeadResponse{
