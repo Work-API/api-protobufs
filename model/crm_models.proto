@@ -15,8 +15,8 @@ message Company
     ContactAddress billing_address =10;
     ContactAddress shipping_address=11;
 
-    ContactPhoneNumber phone=15;
-    ContactPhoneNumber fax=16;
+    model.ContactPhoneNumber phone=15;
+    model.ContactPhoneNumber fax=16;
 
     repeated Contact contacts=20;
 
