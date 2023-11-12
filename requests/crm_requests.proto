@@ -41,3 +41,22 @@ message CrmListLeadsRequest{
 }
 
 
+message CrmGetOpportunityRequest{
+   model.Opportunity opportunity =1;
+}
+
+message CrmListOpportunitiesRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
+
+message CrmGetTaskRequest {
+  model.Lead task=1;
+}
+
+message CrmListTasksRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+

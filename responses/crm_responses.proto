@@ -37,3 +37,20 @@ message CrmGetLeadResponse{
 message CrmListLeadsResponse{
   repeated model.Lead leads=1;
 }
+
+
+message CrmGetOpportunityResponse{
+  model.Opportunity opportunity =1;
+}
+
+message CrmListOpportunitiesResponse{
+  repeated model.Opportunity opportunities =1;
+}
+
+message CrmGetTaskResponse{
+  model.Task task=1;
+}
+
+message CrmListTasksResponse{
+  repeated model.Task tasks=1;
+}
