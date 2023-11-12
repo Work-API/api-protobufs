@@ -51,11 +51,11 @@ message CrmListOpportunitiesRequest{
 }
 
 
-message CrmGetTaskRequest {
+message CrmGetTaskNewRequest {
   model.Task task=1;
 }
 
-message CrmListTasksRequest{
+message CrmListTasksNewRequest{
   uint64 offset = 1;
   uint64 limit = 2;
 }

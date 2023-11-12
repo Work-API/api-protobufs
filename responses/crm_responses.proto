@@ -47,10 +47,10 @@ message CrmListOpportunitiesResponse{
   repeated model.Opportunity opportunities =1;
 }
 
-message CrmGetTaskResponse{
+message CrmGetTaskNewResponse{
   model.Task task=1;
 }
 
-message CrmListTasksResponse{
+message CrmListTasksNewResponse{
   repeated model.Task tasks=1;
 }
