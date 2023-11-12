@@ -52,7 +52,7 @@ message CrmListOpportunitiesRequest{
 
 
 message CrmGetTaskRequest {
-  model.Lead task=1;
+  model.Task task=1;
 }
 
 message CrmListTasksRequest{
