@@ -43,6 +43,18 @@ message CrmGetLeadRequest {
   model.Lead lead=1;
 }
 
+message CrmUpdateLeadRequest{
+  model.Lead lead=1;
+}
+
+message CrmUpdateOpportunityRequest{
+  model.Opportunity opportunity=1;
+}
+
+message CrmUpdateTaskRequest{
+  model.Task task=1;
+}
+
 message CrmListLeadsRequest{
   uint64 offset = 1;
   uint64 limit = 2;
