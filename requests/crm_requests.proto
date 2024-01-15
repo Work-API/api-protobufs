@@ -25,6 +25,14 @@ message CrmGetCompanyRequest {
   model.Company company=1;
 }
 
+message CrmUpdateCompanyRequest{
+  model.Company company =1;
+}
+
+message CrmDeleteCompnayRequest{
+  model.Company company=1;
+}
+
 message CrmListCompaniesRequest {
   uint64 offset = 1;
   uint64 limit = 2;
