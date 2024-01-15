@@ -25,7 +25,16 @@ message CrmGetCompanyResponse{
   model.Company company=1;
 }
 
-message CrmListCompaniesResponse
+message CrmDeleteCompnayResponse{
+  model.Company company = 1;
+}
+
+message CrmUpdateCompanyResponse{
+  model.Company company = 1;
+}
+
+
+message CrmListCompanyResponse
 {
   repeated model.Company companies=1;
 }
