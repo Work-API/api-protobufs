@@ -32,7 +32,17 @@ message CrmDeleteCompnayResponse{
 message CrmUpdateCompanyResponse{
   model.Company company = 1;
 }
+message CrmUpdateLeadResponse{
+  model.Lead lead=1;
+}
 
+message CrmUpdateOpportunityResponse{
+  model.Opportunity opportunity=1;
+}
+
+message CrmUpdateTaskResponse{
+  model.Task task=1;
+}
 
 message CrmListCompanyResponse
 {
