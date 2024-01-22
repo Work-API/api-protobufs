@@ -44,7 +44,7 @@ message CrmUpdateTaskResponse{
   model.Task task=1;
 }
 
-message CrmListCompanyResponse
+message CrmListCompaniesResponse
 {
   repeated model.Company companies=1;
 }
