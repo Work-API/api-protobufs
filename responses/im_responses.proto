@@ -5,6 +5,7 @@ import 'protobufs/model/auth.proto';
 import 'protobufs/model/channel.proto';
 import 'protobufs/model/team.proto';
 import 'protobufs/model/im_message.proto';
+import 'protobufs/model/su'
 
 package work_api.protobufs.responses;
 
@@ -45,4 +46,8 @@ message GetImUserResponse {
 
 message ListImMessagesResponse {
   repeated model.ImMessage messages = 1;
+}
+
+message CreateIMSubsciptionRespone{
+   repeated model.Subscription Subscriptions = 1;
 }
