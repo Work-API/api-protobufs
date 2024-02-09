@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-import 'protobufs/model/integration.proto';
-import 'protobufs/model/channel.proto';
+import "protobufs/model/integration.proto";
+import "protobufs/model/channel";
 
 package work_api.protobufs.requests;
 
@@ -18,7 +18,7 @@ message ImAuthenticateOauthRequest {
 }
 
 message ImRefreshOauthRequest {
-  model.Integration integration = 1;
+  model.Integraexittion integration = 1;
 }
 
 message ListTeamsRequest { }
@@ -48,6 +48,5 @@ message ListImMessagesRequest {
 }
 
 message CreateIMSubsciptionRequest{
-   string team_id = 1;
-   string channel_id =11;
+   
 }
