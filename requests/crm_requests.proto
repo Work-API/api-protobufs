@@ -1,7 +1,8 @@
 syntax = "proto3";
 
-import "protobufs/model/integration.proto";
-import "protobufs/model/contact.proto";
+import 'protobufs/model/integration.proto';
+import 'protobufs/model/crm_models.proto';
+
 package work_api.protobufs.requests;
 
 message CrmInitOauthRequest {
@@ -25,46 +26,62 @@ message CrmRefreshOauthRequest {
   model.Integration integration = 1;
 }
 
-message GetCrmContactsRequest{
+message CrmGetCompanyRequest {
+  model.Company company=1;
+}
+
+message CrmUpdateCompanyRequest{
+  model.Company company =1;
+}
+
+message CrmDeleteCompnayRequest{
+  model.Company company=1;
+}
+
+message CrmListCompaniesRequest {
   uint64 offset = 1;
   uint64 limit = 2;
-  
+
 }
 
-message GetCrmContactRequest{
-  model.Contact contact=1;
-  
+message CrmGetLeadRequest {
+  model.Lead lead=1;
 }
 
-message GetOrganisationRequest {
-    string id =1;
+message CrmUpdateLeadRequest{
+  model.Lead lead=1;
 }
 
-message GetTaskRequest{
-  string remote_id=1;
+message CrmUpdateOpportunityRequest{
+  model.Opportunity opportunity=1;
 }
 
-message ListTasksRequest{
+message CrmUpdateTaskRequest{
+  model.Task task=1;
+}
+
+message CrmListLeadsRequest{
   uint64 offset = 1;
   uint64 limit = 2;
 }
 
-message GetOpportunityRequest{
-string remote_id=1;
+
+message CrmGetOpportunityRequest{
+   model.Opportunity opportunity =1;
 }
 
-message ListOpportunitiesRequest{
-  
-  uint64 offset=1;
-  uint64 limit=2;
+message CrmListOpportunitiesRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
 }
 
-message GetLeadRequest{
-  
-  string remote_id=1;
+
+message CrmGetTaskNewRequest {
+  model.Task task=1;
 }
 
-message ListLeadsRequest{
-  
+message CrmListTasksNewRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
 }
 

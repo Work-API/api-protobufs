@@ -7,6 +7,8 @@ import "protobufs/model/organisation.proto";
 import "protobufs/model/opportunity.proto";
 import "protobufs/model/leads.proto";
 import "protobufs/model/contact.proto";
+import "protobufs/model/crm_models.proto";
+
 
 package work_api.protobufs.responses;
 
@@ -24,44 +26,56 @@ message CrmAuthenticateOauthResponse {
   Error error = 2;
 }
 
-message GetLeadResponse{
+
+message CrmGetCompanyResponse{
+  model.Company company=1;
+}
+
+message CrmDeleteCompnayResponse{
+  model.Company company = 1;
+}
+
+message CrmUpdateCompanyResponse{
+  model.Company company = 1;
+}
+message CrmUpdateLeadResponse{
   model.Lead lead=1;
 }
 
-message GetCrmContactsResponse{
-  repeated model.Contact contacts=1;
+message CrmUpdateOpportunityResponse{
+  model.Opportunity opportunity=1;
 }
 
-message ListLeadsResponse{
-  repeated model.Lead leads=1;
-}
-
-message GetOpportunityResponse{
-  model.Opportunity opportunity =1;
-}
-
-message ListOpportunitiesResponse{
-  repeated model.Opportunity opportunities =1;
-}
-
-message GetTaskResponse{
+message CrmUpdateTaskResponse{
   model.Task task=1;
 }
 
-message ListTasksResponse{
-  repeated model.Task tasks =1;
+message CrmListCompaniesResponse
+{
+  repeated model.Company companies=1;
 }
 
-message GetOrganisationResponse{
-  model.Organisation organisation=1;
+message CrmGetLeadResponse{
+  model.Lead lead=1;
 }
 
-message ListOrganisationResponse{
-  repeated model.Organisation organisations=1;
-
+message CrmListLeadsResponse{
+  repeated model.Lead leads=1;
 }
 
-message GetCrmContactResponse{
-  model.Contact contact=1;
+
+message CrmGetOpportunityResponse{
+  model.Opportunity opportunity =1;
 }
 
+message CrmListOpportunitiesResponse{
+  repeated model.Opportunity opportunities =1;
+}
+
+message CrmGetTaskNewResponse{
+  model.Task task=1;
+}
+
+message CrmListTasksNewResponse{
+  repeated model.Task tasks=1;
+}
