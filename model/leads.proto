@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+import "protobufs/model/contact.proto";
+
+package work_api.protobufs.model;
+message Lead {
+
+    string remote_id = 1;
+    string integration_id = 2;
+    string id = 3;
+    bool isdeleted = 4;
+    string masterrecordid = 5;
+    
+    string company = 6;
+    ContactAddress address = 7;
+    string phone = 8;
+    string mobilephone = 9;
+    string fax = 10;
+    string email = 11;
+    string website = 12;
+    string photourl = 13;
+    string description = 14;
+    string leadsource = 15;
+    string status = 16;
+    string industry = 17;
+    string rating = 18;
+    string annualrevenue = 19;
+    string numberofemployees = 20;
+    string ownerid = 21;
+    bool isconverted = 22;
+    uint64 converteddate = 23;
+    string convertedaccountid = 24;
+    string convertedcontactid = 25;
+    string convertedopportunityid = 26;
+    bool isunreadbyowner = 27;
+    uint64 createddate = 28;
+    string createdbyid = 29;
+    uint64 lastmodifieddate = 30;
+    string lastmodifiedbyid = 31;
+    uint64 systemmodstamp = 32;
+    uint64 lastactivitydate = 33;
+    uint64 lastvieweddate = 34;
+    uint64 lastreferenceddate = 35;
+    string jigsaw = 36;
+    string jigsawcontactid = 37;
+    string cleanstatus = 38;
+    string companydunsnumber = 39;
+    string dandbcompanyid = 40;
+    string emailbouncedreason = 41;
+    uint64 emailbounceddate = 42;
+    string individualid = 43;
+    string siccode__c = 44;
+    string productinterest__c = 45;
+    string primary__c = 46;
+    string currentgenerators__c = 47;
+    string numberoflocations__c = 48;
+ 
+      
+}

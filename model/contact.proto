@@ -10,23 +10,23 @@ message ContactGroup {
 }
 
 message Contact {
-  string remote_id = 1;
-  string integration_id = 2;
+  string remote_id = 4;
+  string integration_id = 5;
 
-  string title = 3;
-  string first_name = 4;
-  string middle_name = 5;
-  string last_name = 6;
+  string title = 6;
+  string first_name = 7;
+  string middle_name = 8;
+  string last_name = 9;
 
-  repeated ContactEmailAddress email_addresses = 7;
-  repeated ContactPhoneNumber phone_numbers = 8;
-  repeated ContactAddress addresses = 9;
-  repeated ContactGroup groups = 10;
+  repeated ContactEmailAddress email_addresses = 11;
+  repeated ContactPhoneNumber phone_numbers = 12;
+  repeated ContactAddress addresses = 13;
+  repeated ContactGroup groups = 14;
 
-  string picture_url = 11;
+  string picture_url = 21;
 
-  uint64 created_at = 12;
-  uint64 updated_at = 13;
+  uint64 created_at = 22;
+  uint64 updated_at = 23;
 }
 
 message ContactEmailAddress {

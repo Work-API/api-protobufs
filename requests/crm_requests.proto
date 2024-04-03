@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 import 'protobufs/model/integration.proto';
-
+import 'protobufs/model/crm_models.proto';
 
 package work_api.protobufs.requests;
 
@@ -15,5 +15,73 @@ message CrmAuthenticateOauthRequest {
   model.Integration integration = 1;
   string code = 2;
   string state = 3;
+}
+
+message ListOrganisationRequest {
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
+message CrmRefreshOauthRequest {
+  model.Integration integration = 1;
+}
+
+message CrmGetCompanyRequest {
+  model.Company company=1;
+}
+
+message CrmUpdateCompanyRequest{
+  model.Company company =1;
+}
+
+message CrmDeleteCompnayRequest{
+  model.Company company=1;
+}
+
+message CrmListCompaniesRequest {
+  uint64 offset = 1;
+  uint64 limit = 2;
+
+}
+
+message CrmGetLeadRequest {
+  model.Lead lead=1;
+}
+
+message CrmUpdateLeadRequest{
+  model.Lead lead=1;
+}
+
+message CrmUpdateOpportunityRequest{
+  model.Opportunity opportunity=1;
+}
+
+message CrmUpdateTaskRequest{
+  model.Task task=1;
+}
+
+message CrmListLeadsRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
+
+message CrmGetOpportunityRequest{
+   model.Opportunity opportunity =1;
+}
+
+message CrmListOpportunitiesRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
+
+message CrmGetTaskNewRequest {
+  model.Task task=1;
+}
+
+message CrmListTasksNewRequest{
+  uint64 offset = 1;
+  uint64 limit = 2;
 }
 

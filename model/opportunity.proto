@@ -1,0 +1,55 @@
+
+syntax = "proto3";
+
+package work_api.protobufs.model;
+
+message Opportunity {
+    string remote_id = 1;
+    string integration_id = 2;
+    string id = 3;
+    bool is_deleted = 4;
+    string account_id = 5;
+    bool is_private = 6;
+    string name = 7;
+    string description = 8;
+    string stagename = 9;
+    double amount = 10;
+    double probability = 11;
+    double expected_revenue = 12;
+    string total_opportunity_quantity = 13;
+    uint64 close_date = 14;
+    string type = 15;
+    string next_step = 16;
+    string leadsource = 17;
+    bool is_closed = 18;
+    bool is_won = 19;
+    string forecast_category = 20;
+    string forecast_category_name = 21;
+    string campaign_id = 22;
+    bool has_opportunity_lineitem = 23;
+    string pricebook2_id = 24;
+    string owner_id = 25;
+    uint64 created_date = 26;
+    string created_by_id = 27;
+    uint64 last_modified_date = 28;
+    string last_modifiedby_id = 29;
+    string systemmodstamp = 30;
+    uint64 last_activity_date = 31;
+    uint32 pushcount = 32;
+    uint64 last_stage_changedate = 33;
+    uint32 fiscal_quarter = 34;
+    uint32 fisca_lyear = 35;
+    string fiscal = 36;
+    string contactid = 37;
+    uint64 last_viewed_date = 38;
+    uint64 last_referenced_date = 39;
+    bool has_open_activity = 40;
+    bool has_overdue_task = 41;
+    string last_amount_changed_history_id = 42;
+    uint64 last_close_date_changed_history_id = 43;
+    string delivery_installation_status__c = 44;
+    string trackingnumber__c = 45;
+    string ordernumber__c = 46;
+    string currentgenerators__c = 47;
+    string maincompetitors__c = 48;
+}
