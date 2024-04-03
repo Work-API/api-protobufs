@@ -17,6 +17,11 @@ message CrmAuthenticateOauthRequest {
   string state = 3;
 }
 
+message ListOrganisationRequest {
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
 message CrmRefreshOauthRequest {
   model.Integration integration = 1;
 }

@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+import "protobufs/model/contact.proto";
+
+package work_api.protobufs.model;
+
+
+message Organisation{
+    string remote_id = 1;
+    string integration_id = 2;
+    string name = 3;
+    string type = 4;
+    ContactAddress blliingAddress = 5;
+    ContactAddress shippingAddress = 6;
+    repeated ContactPhoneNumber phone_numbers = 7;
+    string website = 8;
+    string picture_url = 9;
+    string industry = 10;
+    uint32 anual_revenue = 11;
+    uint32 number_of_employees = 12;
+    string ownership = 13;
+    string description = 14;
+    string rating = 15;
+    string owner_id = 16;
+    uint64 created_at = 17;
+    uint64 updated_at = 18;
+    string CustomerPriority__c = 19;
+    string SLA__c = 20;
+    string Active__c = 21;
+    double NumberofLocations__c = 22;
+    string UpsellOpportunity__c = 23;
+    string SLASerialNumber__c = 24;
+    string SLAExpirationDate__c = 25;
+    repeated Contact contacts = 26;
+  }
+  
+  

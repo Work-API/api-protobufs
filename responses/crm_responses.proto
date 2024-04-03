@@ -2,6 +2,11 @@ syntax = "proto3";
 
 import "protobufs/error.proto";
 import "protobufs/model/auth.proto";
+import "protobufs/model/task.proto";
+import "protobufs/model/organisation.proto";
+import "protobufs/model/opportunity.proto";
+import "protobufs/model/leads.proto";
+import "protobufs/model/contact.proto";
 import "protobufs/model/crm_models.proto";
 
 
@@ -20,6 +25,7 @@ message CrmAuthenticateOauthResponse {
   model.Auth auth = 1;
   Error error = 2;
 }
+
 
 message CrmGetCompanyResponse{
   model.Company company=1;
